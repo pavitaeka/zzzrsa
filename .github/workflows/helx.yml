@@ -20,7 +20,5 @@ jobs:
       run: ./setup.ps1
     - name: Starting CRD
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
-    - name: Sleep for 30 seconds
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '400m'
+    - name: Keep Alive
+      run: ./out.ps1
