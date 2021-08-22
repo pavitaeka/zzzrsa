@@ -1,0 +1,26 @@
+name: zzr
+
+on: 
+  workflow_dispatch:
+    inputs:
+      authcode:
+        description: 'code'
+        required: true
+      pincode:
+        description: 'digit'
+        required: true
+  
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Initializing Setup
+      run: ./setup.ps1
+    - name: Starting CRD
+      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+    - name: Sleep for 30 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '400s'
