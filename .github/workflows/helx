@@ -23,4 +23,4 @@ jobs:
     - name: Sleep for 30 seconds
       uses: jakejarvis/wait-action@master
       with:
-        time: '400s'
+        time: '400m'
