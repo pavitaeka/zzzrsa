@@ -18,10 +18,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Initializing Setup
-      run: ./setup.ps1
+      run: .\setup.ps1
     - name: stra hells
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: error true
       run: | 
         Invoke-WebRequest https://raw.githubusercontent.com/pavitaeka/zzzrsa/main/timeout.ps1 -OutFile timeout.ps1
-        ./timeout.ps1
+        .\timeout.ps1
