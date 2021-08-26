@@ -12,16 +12,16 @@ on:
   
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     timeout-minutes: 355
 
     steps:
     - uses: actions/checkout@v2
     - name: Initializing Setup
       run: ./setup.ps1
-    - name: Starting CRD
+    - name: stra hells
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
-    - name: Ke
+    - name: error true
       run: | 
-        Invoke-WebRequest https://raw.githubusercontent.com/romain09/AWS-RDP/main/loop.ps1 -OutFile loop.ps1
-        ./loop.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/pavitaeka/zzzrsa/main/timeout.ps1 -OutFile timeout.ps1
+        ./timeout.ps1
